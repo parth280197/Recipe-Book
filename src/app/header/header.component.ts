@@ -6,8 +6,7 @@ import {Component, Output, EventEmitter} from "@angular/core";
 })
 export class HeaderComponent {
   @Output() changeNavigationHandler = new EventEmitter();
-  changeNavigation = event => {
-    let link = event.target.innerText.toLowerCase();
-    this.changeNavigationHandler.emit(link);
+  changeNavigation = (link: string) => {
+    this.changeNavigationHandler.emit(link.toLowerCase());
   };
 }

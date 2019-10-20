@@ -9,10 +9,6 @@ export class AppComponent {
   currentPage = "recipes";
   title = "Project";
   onTabChange = (navigationLink: string) => {
-    if (navigationLink == "recipes") {
-      this.currentPage = "recipes";
-    } else if (navigationLink == "shopping list") {
-      this.currentPage = "shopping list";
-    }
+    this.currentPage = navigationLink;
   };
 }
